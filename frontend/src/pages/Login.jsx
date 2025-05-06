@@ -41,8 +41,16 @@ function Login() {
         setTipoAlerta("error")
         setVisibleAlerta(true)
         return
-      } 
-      navigate("/panelUsuarios")
+      }
+      const rol=data.usuario?.rol
+      console.log(data.usuario)
+      
+      if (rol === "admin") {
+        navigate("/dashboard.admin");
+      } else {
+        navigate("/dashboard.usuario");
+      }
+    
 
     } catch (error) {
       setError("Error en el servidor porfavor intenta mas tarde ")
@@ -167,6 +175,17 @@ function Login() {
             </Link>
         </p>
       </div>
+        <button className="
+        bg-blue-600
+        hover:bg-blue-700 hover:cursor-pointer
+        rounded-lg
+        px-4 py-2
+        text-2xl
+        mt-5
+        transition duration-200 ease-in-out
+        ">
+                <Link to='/'>Home</Link>
+        </button>
       <Alerta
       tipo={tipoAlerta}
       mensaje={error}

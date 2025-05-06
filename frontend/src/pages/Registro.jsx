@@ -181,6 +181,18 @@ function Registro() {
                 </Link>
             </p>
         </div>
+
+        <button className="
+        bg-blue-600
+        hover:bg-blue-700 hover:cursor-pointer
+        rounded-lg
+        px-4 py-2
+        text-2xl
+        mt-5
+        transition duration-200 ease-in-out
+        ">
+                <Link to='/'>Home</Link>
+        </button>
     </div>
   );
 }

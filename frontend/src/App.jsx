@@ -3,7 +3,9 @@ import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Registro from './pages/Registro';
-import PanelUsuario from './pages/Panel.usuario';
+import DashboardAdmin from './pages/dashboard.admin';
+import DashboardUsuario from './pages/dashboard.usuario';
+
 
 function App() {
 
@@ -15,8 +17,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/registro" element={<Registro />} />
-        <Route path="/panelUsuario" element={<PanelUsuario />}/>
-      
+        <Route path='/dashboard.admin' element={<DashboardAdmin/>}/>
+        <Route path='/dashboard.usuario' element={<DashboardUsuario/>} />    
       </Routes>
     </BrowserRouter>
     </>

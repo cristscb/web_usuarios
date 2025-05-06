@@ -200,9 +200,10 @@ router.post("/login", async (req, res) => {
       id: usuario.id,
       nombre_usuario: usuario.nombre_usuario,
       email: usuario.email,
+      rol:usuario.rol
     };
 
-    res.json(usuarioAutenticado);
+    res.json({usuario: usuarioAutenticado});
 
   } catch (error) {
     console.error("Error al autenticar usuario", error);
